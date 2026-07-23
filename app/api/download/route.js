@@ -51,11 +51,20 @@ export async function GET(request) {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        Accept: "*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+        // TikTok's CDN checks these — without a matching Referer/Origin it
+        // sometimes 403s a perfectly unexpired, valid link.
         Referer: "https://www.tiktok.com/",
+        Origin: "https://www.tiktok.com",
+        "Sec-Fetch-Dest": "video",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-site",
       },
       cache: "no-store",
     });
-  } catch {
+  } catch (err) {
+    console.error("Upstream fetch threw:", err?.message || err);
     return Response.json(
       { error: "Couldn't reach the media file. Try again." },
       { status: 502 }
@@ -63,6 +72,17 @@ export async function GET(request) {
   }
 
   if (!upstream.ok || !upstream.body) {
+    // Logged so we can see TikTok's actual status/response instead of
+    // guessing whether it's a real expiry, a missing header, or a block.
+    let bodySnippet = "";
+    try {
+      bodySnippet = (await upstream.text()).slice(0, 300);
+    } catch {
+      // ignore — body may not be readable (e.g. already consumed)
+    }
+    console.error(
+      `Upstream media fetch failed: status=${upstream.status} ${upstream.statusText} url=${mediaUrl} body=${bodySnippet}`
+    );
     return Response.json(
       { error: "The media link expired. Paste the TikTok URL again." },
       { status: 502 }
