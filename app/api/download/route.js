@@ -27,6 +27,18 @@ export async function GET(request) {
   const nameParam = searchParams.get("filename");
 
   if (!mediaUrl || !isAllowedMediaUrl(mediaUrl)) {
+    // Logged so a rejected-but-legitimate TikTok CDN host is easy to spot
+    // in Vercel's function logs and add to ALLOWED_MEDIA_HOST_SUFFIXES in
+    // lib/tiktok.js, instead of guessing why downloads silently fail.
+    if (mediaUrl) {
+      try {
+        console.error(
+          `Rejected media host not in allowlist: ${new URL(mediaUrl).hostname}`
+        );
+      } catch {
+        console.error("Rejected media URL was not a valid URL:", mediaUrl);
+      }
+    }
     return Response.json(
       { error: "That media URL isn't allowed." },
       { status: 400 }
