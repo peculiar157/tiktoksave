@@ -36,7 +36,7 @@ export default function Features() {
     <section className="py-16 sm:py-20">
       <div className="text-center">
         <h2 className="text-2xl font-bold text-brand-950 sm:text-3xl">
-          Why people use TikTokSave
+          Why people use DLTok
         </h2>
       </div>
 

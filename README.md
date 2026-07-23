@@ -1,4 +1,4 @@
-# TikTokSave
+# DLTok
 
 A free TikTok video/audio downloader built with Next.js — no paid third-party
 API, SEO-ready, with a Markdown blog and the legal pages Google AdSense
@@ -48,7 +48,7 @@ If you've never used Git/GitHub before, here's the whole flow:
 1. Create a free account at [github.com](https://github.com) if you don't
    have one.
 2. Click the **+** icon (top right) → **New repository**. Name it
-   `tiktoksave` (or anything you like), leave it **Public** or **Private** as
+   `dltok` (or anything you like), leave it **Public** or **Private** as
    you prefer, and click **Create repository** — don't add a README,
    .gitignore, or license, since this project already has them.
 3. GitHub will show you a page with commands. Back in your terminal,
@@ -58,7 +58,7 @@ If you've never used Git/GitHub before, here's the whole flow:
    git add -A
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/tiktoksave.git
+   git remote add origin https://github.com/YOUR-USERNAME/dltok.git
    git push -u origin main
    ```
 
@@ -74,16 +74,16 @@ That's it — your code is now on GitHub.
 1. Go to [vercel.com](https://vercel.com) and sign up using your **GitHub**
    account (this makes step 2 automatic).
 2. Click **Add New… → Project**.
-3. Pick the `tiktoksave` repo from the list and click **Import**.
+3. Pick the `dltok` repo from the list and click **Import**.
 4. Vercel auto-detects Next.js — you don't need to change any build
    settings. Before clicking Deploy, open **Environment Variables** and add:
 
    | Name | Value |
    |---|---|
-   | `NEXT_PUBLIC_SITE_URL` | `https://tiktoksave.vercel.app` (or your real domain once you have one) |
+   | `NEXT_PUBLIC_SITE_URL` | `https://dltok.vercel.app` (or your real domain once you have one) |
 
 5. Click **Deploy**. In about a minute you'll get a live URL like
-   `https://tiktoksave.vercel.app`.
+   `https://dltok.vercel.app`.
 
 Every time you `git push` to `main` from now on, Vercel automatically
 redeploys — that's the whole workflow.

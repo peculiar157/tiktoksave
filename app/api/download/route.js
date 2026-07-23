@@ -9,7 +9,7 @@ const CONTENT_TYPES = {
 };
 
 function safeFilename(name, fallbackExt) {
-  const base = (name || "tiktoksave-video")
+  const base = (name || "dltok-video")
     .replace(/[^\w\-.]+/g, "_")
     .slice(0, 80);
   return base.endsWith(`.${fallbackExt}`) ? base : `${base}.${fallbackExt}`;

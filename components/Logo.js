@@ -13,10 +13,10 @@ export default function Logo({ dark = false }) {
             : "bg-gradient-to-br from-brand-500 to-brand-700 text-white"
         }`}
       >
-        T
+        D
       </span>
       <span className={dark ? "text-white" : "text-brand-950"}>
-        TikTok<span className="text-accent-500">Save</span>
+        DL<span className="text-accent-500">Tok</span>
       </span>
     </Link>
   );

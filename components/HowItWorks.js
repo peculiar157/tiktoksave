@@ -4,7 +4,7 @@ const STEPS = [
     body: "Open TikTok, find the video, tap Share, then Copy Link.",
   },
   {
-    title: "Paste it in TikTokSave",
+    title: "Paste it in DLTok",
     body: "Drop the link into the box above and hit “Get download links”.",
   },
   {

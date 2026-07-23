@@ -30,4 +30,4 @@ Many jurisdictions (the U.S. included) recognize "fair use" or "fair dealing" ex
 
 If you'd be comfortable with the original creator seeing exactly how you used their video — and they'd have no reasonable objection — you're probably in safe territory. If you're monetizing, removing credit, or claiming the work as your own, that's the point where legal risk (and just basic fairness to the creator) goes up.
 
-Tools like TikTokSave are built for the low-risk case: saving something for yourself, quickly, without a watermark getting in the way. What you do with the file afterward is on you.
+Tools like DLTok are built for the low-risk case: saving something for yourself, quickly, without a watermark getting in the way. What you do with the file afterward is on you.

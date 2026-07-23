@@ -32,4 +32,4 @@ This strips out the video entirely and gives you just the audio track — the sa
 - Want just the sound? **MP3**.
 - Not sure if HD makes a difference? Download both — HD will never be *worse* than standard, so it's a safe default when it's offered.
 
-Whichever format you pick, all of them come out watermark-free on TikTokSave, so the file is exactly what you'll actually use it for — no cropping out a logo afterward.
+Whichever format you pick, all of them come out watermark-free on DLTok, so the file is exactly what you'll actually use it for — no cropping out a logo afterward.

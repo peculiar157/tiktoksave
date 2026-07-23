@@ -12,8 +12,8 @@ function downloadHref({ url, type, filename }) {
 
 export default function ResultCard({ video }) {
   const baseName = video.author?.username
-    ? `tiktoksave_${video.author.username}_${video.id || ""}`
-    : `tiktoksave_${video.id || "video"}`;
+    ? `dltok_${video.author.username}_${video.id || ""}`
+    : `dltok_${video.id || "video"}`;
 
   const options = [
     video.downloads.standard && {

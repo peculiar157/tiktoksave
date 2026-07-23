@@ -15,12 +15,12 @@ Screen recording works in a pinch, but it re-encodes the audio through your devi
 ## Step-by-step
 
 1. **Find the video** with the sound you want and tap **Share → Copy Link**.
-2. **Paste the link into [TikTokSave](/)** and hit "Get download links."
+2. **Paste the link into [DLTok](/)** and hit "Get download links."
 3. Once the preview loads, click **Download MP3**. The audio track saves directly to your device, ready to drop into a video editor, voice memo app, or music library.
 
 ## What you're actually downloading
 
-TikTok stores the audio for a video as a separate track from the visual footage — that's the same track used when someone else "uses this sound" on a different video. When you download the MP3 through TikTokSave, you're getting that original audio file, not a re-recording of the video's playback.
+TikTok stores the audio for a video as a separate track from the visual footage — that's the same track used when someone else "uses this sound" on a different video. When you download the MP3 through DLTok, you're getting that original audio file, not a re-recording of the video's playback.
 
 ## A quick legal note
 

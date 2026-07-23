@@ -16,7 +16,7 @@ export default function BlogIndexPage() {
     <Container className="py-16 sm:py-20">
       <div className="text-center">
         <h1 className="text-3xl font-bold text-brand-950 sm:text-4xl">
-          TikTokSave Blog
+          DLTok Blog
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-slate-500">
           Practical guides on saving, converting, and using TikTok content —

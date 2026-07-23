@@ -12,20 +12,20 @@ The good news is you don't need any special software to fix this. The clean, unw
 
 ## Why the official download has a watermark
 
-When you save a video through the TikTok app, it renders a new copy of the video with the watermark burned into the pixels at export time. The original file sitting on TikTok's servers, however, is untouched — no overlay, no logo. Tools like TikTokSave simply read that original file directly instead of going through the app's export step.
+When you save a video through the TikTok app, it renders a new copy of the video with the watermark burned into the pixels at export time. The original file sitting on TikTok's servers, however, is untouched — no overlay, no logo. Tools like DLTok simply read that original file directly instead of going through the app's export step.
 
 ## Step-by-step: downloading without the watermark
 
 1. **Open the TikTok video** you want to save, either in the app or on tiktok.com.
 2. **Tap Share**, then **Copy Link**. This copies the video's URL to your clipboard.
-3. **Head to [TikTokSave](/)** and paste the link into the box at the top of the page.
+3. **Head to [DLTok](/)** and paste the link into the box at the top of the page.
 4. **Click "Get download links."** In a couple of seconds you'll see a preview of the video along with download buttons.
 5. **Choose MP4** (or **HD MP4** if it's available for that video) and the file saves straight to your device — no watermark, no extra app.
 
 ## A few things worth knowing
 
 - **Only public videos work.** If a video is set to private or "Friends only," there's no publicly accessible page for a downloader to read, so it can't be pulled.
-- **Quality depends on the original upload.** TikTokSave serves the best version TikTok itself has stored; it doesn't upscale or re-encode anything, so you're getting the real source quality.
+- **Quality depends on the original upload.** DLTok serves the best version TikTok itself has stored; it doesn't upscale or re-encode anything, so you're getting the real source quality.
 - **Links can expire.** TikTok's CDN URLs are time-limited, which is why you should download soon after generating the link rather than saving the link itself for later.
 
 ## Respecting creators

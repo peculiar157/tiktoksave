@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-500">
-            TikTokSave is a free tool for saving public TikTok videos without
+            DLTok is a free tool for saving public TikTok videos without
             the watermark, in MP4 or MP3, straight from your browser. No
             account, no app install, no watermark.
           </p>
@@ -65,7 +65,7 @@ export default function Footer() {
 
       <div className="border-t border-brand-100 py-6">
         <Container className="flex flex-col items-center justify-between gap-3 text-xs text-slate-400 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} TikTokSave. Not affiliated with TikTok.</p>
+          <p>&copy; {new Date().getFullYear()} DLTok. Not affiliated with TikTok.</p>
           <p>Built for personal, fair-use downloads only.</p>
         </Container>
       </div>
