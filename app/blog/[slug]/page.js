@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }) {
         <div className="mt-10 rounded-2xl border border-brand-100 bg-brand-50 p-5 text-sm text-brand-900">
           Ready to save a video?{" "}
           <Link href="/#downloader" className="font-semibold underline">
-            Try the DLTok downloader
+            Try the TikTokSave downloader
           </Link>
           .
         </div>

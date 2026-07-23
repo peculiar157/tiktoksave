@@ -4,19 +4,19 @@ import { useState } from "react";
 
 const FAQS = [
   {
-    q: "Is DLTok free to use?",
+    q: "Is TikTokSave free to use?",
     a: "Yes. Every download — MP4, HD MP4, and MP3 — is free, with no account, watermark, or hidden limits.",
   },
   {
     q: "Why can't I download a private video?",
-    a: "DLTok can only read publicly viewable TikTok pages, the same way a browser would. Private, friends-only, or deleted videos can't be accessed.",
+    a: "TikTokSave can only read publicly viewable TikTok pages, the same way a browser would. Private, friends-only, or deleted videos can't be accessed.",
   },
   {
     q: "Will the video have a TikTok watermark on it?",
-    a: "No. DLTok pulls the original, unwatermarked file straight from the source rather than recording the on-screen watermark version.",
+    a: "No. TikTokSave pulls the original, unwatermarked file straight from the source rather than recording the on-screen watermark version.",
   },
   {
-    q: "Does DLTok store my downloads?",
+    q: "Does TikTokSave store my downloads?",
     a: "No. We don't keep a copy of videos you look up, and we don't log what you personally download.",
   },
   {

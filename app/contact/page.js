@@ -7,7 +7,7 @@ export const metadata = {
   alternates: { canonical: "/contact" },
 };
 
-const CONTACT_EMAIL = "hello@dltok.example.com";
+const CONTACT_EMAIL = "hello@tiktoksave.example.com";
 
 export default function ContactPage() {
   return (
