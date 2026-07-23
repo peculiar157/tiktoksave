@@ -35,8 +35,8 @@ export default function Home() {
             Save any TikTok video, watermark-free
           </h1>
           <p className="mt-4 max-w-xl text-base leading-7 text-brand-100 sm:text-lg">
-            Paste a link, pick MP4, HD MP4, or MP3 — and it's on your device
-            in seconds. No account, no software, no watermark.
+            Paste a link, pick MP4, HD MP4, or MP3, and save it in seconds.
+            No account, no software, no watermark.
           </p>
 
           <div className="mt-10 w-full max-w-2xl">

@@ -9,7 +9,7 @@ const STEPS = [
   },
   {
     title: "Choose your format",
-    body: "Pick MP4 (with an HD option) or MP3, and it saves straight to your device.",
+    body: "Pick MP4 (with an HD option) or MP3 — it opens in a new tab, ready for you to save.",
   },
 ];
 

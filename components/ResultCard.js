@@ -5,11 +5,6 @@ function formatCount(n) {
   return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
 }
 
-function downloadHref({ url, type, filename }) {
-  const params = new URLSearchParams({ url, type, filename });
-  return `/api/download?${params.toString()}`;
-}
-
 export default function ResultCard({ video }) {
   const baseName = video.author?.username
     ? `tiktoksave_${video.author.username}_${video.id || ""}`
@@ -19,8 +14,7 @@ export default function ResultCard({ video }) {
     video.downloads.standard && {
       key: "mp4-standard",
       label: "Download MP4",
-      hint: "No watermark · standard quality",
-      type: "mp4",
+      hint: "Opens in a new tab · right-click → Save video as",
       url: video.downloads.standard,
       filename: `${baseName}.mp4`,
       accent: "bg-brand-600 hover:bg-brand-700 text-white",
@@ -28,8 +22,7 @@ export default function ResultCard({ video }) {
     video.downloads.hd && {
       key: "mp4-hd",
       label: "Download HD MP4",
-      hint: "No watermark · highest bitrate available",
-      type: "mp4",
+      hint: "Highest bitrate available · new tab, right-click → Save",
       url: video.downloads.hd,
       filename: `${baseName}_hd.mp4`,
       accent: "bg-brand-950 hover:bg-brand-900 text-white",
@@ -37,8 +30,7 @@ export default function ResultCard({ video }) {
     video.downloads.mp3 && {
       key: "mp3",
       label: "Download MP3",
-      hint: "Audio / sound only",
-      type: "mp3",
+      hint: "Audio only · new tab, right-click → Save audio as",
       url: video.downloads.mp3,
       filename: `${baseName}.mp3`,
       accent: "bg-accent-500 hover:bg-accent-600 text-brand-950",
@@ -113,7 +105,11 @@ export default function ResultCard({ video }) {
             {options.map((option) => (
               <a
                 key={option.key}
-                href={downloadHref(option)}
+                href={option.url}
+                download={option.filename}
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerPolicy="no-referrer"
                 className={`inline-flex flex-col rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition ${option.accent}`}
               >
                 <span>{option.label}</span>
@@ -123,6 +119,12 @@ export default function ResultCard({ video }) {
               </a>
             ))}
           </div>
+
+          <p className="mt-3 text-xs text-slate-400">
+            Downloads open directly from TikTok in a new tab — once it
+            loads, right-click (or press and hold on mobile) and choose
+            "Save video as" / "Save audio as."
+          </p>
         </div>
       </div>
     </div>

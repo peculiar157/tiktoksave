@@ -15,11 +15,19 @@ function safeFilename(name, fallbackExt) {
   return base.endsWith(`.${fallbackExt}`) ? base : `${base}.${fallbackExt}`;
 }
 
-// Streams the actual media file through our own server instead of sending
-// the user straight to TikTok's CDN link. This is what makes the "Save"
-// button behave like a real download (correct filename, no CORS surprises,
-// no relying on the link staying valid) rather than opening TikTok's raw
-// file in a new tab.
+// NOTE: as of the last test, TikTok's video CDN returns 403 Forbidden to
+// requests coming from Vercel's (and most cloud hosts') IP ranges — this is
+// TikTok blocking known datacenter/hosting-provider traffic at the CDN
+// edge, unrelated to anything in this code. Because of that, the UI
+// (components/ResultCard.js) currently links users directly to TikTok's
+// CDN instead of routing through this proxy, since a request from the
+// user's own residential/mobile IP isn't blocked the same way.
+//
+// This route is kept in place because it still streams the file with a
+// proper filename and Content-Disposition when it *can* reach the CDN
+// (e.g. if you later put this behind a residential proxy service, or if
+// TikTok's blocking changes) — see ResultCard.js if you want to switch
+// back to it.
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const mediaUrl = searchParams.get("url");
