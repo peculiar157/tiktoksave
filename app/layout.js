@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-W1NJ6D58EQ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-81YVDY6LTH"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-W1NJ6D58EQ');
+            gtag('config', 'G-81YVDY6LTH');
           `}
         </Script>
         <Header />
