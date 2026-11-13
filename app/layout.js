@@ -8,6 +8,7 @@ import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/site"
 // of next/font/google: it keeps builds fast and fully self-contained, with
 // zero dependency on fetching fonts from Google at build time.
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+const GA_ID = "G-81YVDY6LTH";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -80,7 +81,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-W1NJ6D58EQ"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -88,7 +89,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-W1NJ6D58EQ');
+            gtag('config', '${GA_ID}');
           `}
         </Script>
         <Header />
